@@ -1,0 +1,13 @@
+.bar-margin {
+    margin-bottom: -56px !important;
+    z-index: 10;
+}
+
+.user-name {
+    color:white;
+    margin-left: 5px;
+}
+
+.marg-left {
+    margin-left: 10px;
+}
