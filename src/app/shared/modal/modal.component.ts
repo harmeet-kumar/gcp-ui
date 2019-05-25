@@ -26,9 +26,10 @@ import {Component} from '@angular/core';
       background: rgba(0,0,0,0.6);
     }
     .arrange {
-      top : 10%;
+      top : 15%;
       min-width: 40%;
-      max-width: 45%;
+      width:50%;
+      max-width: 50%;
     }
   `]
 })
