@@ -4,4 +4,4 @@ COPY . .
 
 RUN npm install
 
-ENTRYPOINT [ "ng serve" ]
+ENTRYPOINT [ "ng","serve" ]

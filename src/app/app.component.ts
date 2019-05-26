@@ -4,6 +4,7 @@ import { User } from './shared/model/user';
 import { HttpClient } from '@angular/common/http';
 import { temporaryAllocator } from '@angular/compiler/src/render3/view/util';
 import { environment } from 'src/environments/environment';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,7 @@ export class AppComponent {
   age:number;
   address:string;
   email:string;
-
+  searchText:string;
   users: BehaviorSubject<User[]> = new BehaviorSubject([]);
 
   constructor(private http: HttpClient) {
@@ -35,6 +36,7 @@ export class AppComponent {
     this.http.post<User[]>(environment.url+'/addUser',temp).subscribe(data => {
       this.users.next(data);
     });
+    
     name = '';
     age = null;
     address = '';
