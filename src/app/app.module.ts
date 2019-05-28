@@ -8,6 +8,8 @@ import { SearchUsersPipe } from './shared/pipes/search-users.pipe';
 import { UserComponent } from './user/user.component';
 import {HttpClientModule} from '@angular/common/http' 
 
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import {HttpClientModule} from '@angular/common/http'
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot({timeOut: 2000,
+      positionClass: 'toast-top-right'})
   ],
   providers: [],
   bootstrap: [AppComponent]
