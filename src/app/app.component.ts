@@ -39,7 +39,7 @@ export class AppComponent {
         temp.Address = userAddress;
         this.http.post<User[]>('/addUser',temp).subscribe(data => {
           this.users.next(data);
-          this.toastr.success('User Added Successfully', 'Name : '+ username);
+          this.toastr.success('User Added.','Success :');
         });
      }
     
